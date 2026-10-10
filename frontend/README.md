@@ -1,5 +1,14 @@
 # React + Vite
 
+## Deploy to Vercel
+
+Set the Vercel project root directory to `frontend`. Vercel will use
+`vercel.json` to build the Vite app and route client-side paths back to
+`index.html`.
+
+The production API URL is configured in `api.js`. Update its production value
+if the backend deployment URL changes.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
