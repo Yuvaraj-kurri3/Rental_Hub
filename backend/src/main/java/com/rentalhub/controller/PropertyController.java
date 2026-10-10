@@ -11,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/properties")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173", "https://rental-hub-ten.vercel.app"})
 public class PropertyController {
 
     private final PropertyRepository propertyRepository;

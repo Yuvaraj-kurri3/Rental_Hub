@@ -9,6 +9,22 @@ mvn spring-boot:run
 ```
 Backend: http://localhost:8081
 
+## Build and run the backend with Docker
+From the repository root:
+```
+docker build -t rental-hub-backend .\backend
+docker run --rm -p 8081:8081 `
+  -e DB_URL="mysql://your-database-host:3306/rental_hub" `
+  -e DB_USERNAME="your-database-user" `
+  -e DB_PASSWORD="your-database-password" `
+  -e JWT_SECRET="replace-with-a-secret-at-least-32-characters" `
+  rental-hub-backend
+```
+
+The Docker build context must be `backend`, because that directory contains the
+Spring Boot `pom.xml` and Dockerfile. Do not run `docker build .` from the
+repository root unless a root Dockerfile is added.
+
 ## Run frontend
 ```
 cd frontend
