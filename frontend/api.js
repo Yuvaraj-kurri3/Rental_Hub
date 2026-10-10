@@ -1,5 +1,5 @@
 const development= "http://localhost:8081";
-const production = "https://rentapp-2s3s.onrender.com";
+const production = "https://rental-hub-zhqe.onrender.com";
 
 const api = import.meta.env.PROD ? production : development;
 
